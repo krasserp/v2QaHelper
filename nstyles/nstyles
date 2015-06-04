@@ -1,0 +1,148 @@
+
+*survey.header:
+@if  gv.survey.root.state.testing
+  <script type="text/javascript" src="/survey/${gv.survey.path}/jquery.cookie.js"></script>
+  <script type="text/javascript" src="/survey/${gv.survey.path}/jquery.jscroll.min.js"></script>
+  <script type="text/javascript" src="/survey/${gv.survey.path}/playerLayer.js"></script>
+  <script type="text/javascript" src="/survey/${gv.survey.path}/v2QaHelper.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.2.2/tinysort.js"></script>
+
+
+  <script type="text/javascript">
+jQuery(function() {
+  /**
+   * Make the tool bar following the screen if the page is longer than the screen
+   * @param  {DOM obj} scrollingDiv [which item to move]
+   * @param  {DOM obj} scrollOn     [which item to base the scroll action on as in QA mode we have no window scroll]
+   * @return {[type]}              [description]
+   */
+  function followScroll(scrollingDiv, scrollOn){
+      jQuery(scrollOn).scroll(function(){
+                scrollingDiv
+                      .stop()
+                      .animate({"marginTop": ( jQuery(scrollOn).scrollTop() + 15) + "px"}, "slow" );  
+        });
+  }
+
+  var  scrollingDiv =  jQuery("#playerFrame");
+
+  if(jQuery('#surveyContainer').length > 0){
+    followScroll(scrollingDiv, '#surveyContainer');
+  } else {
+    //jQuery('#antiRandomize').css('display','none');
+    followScroll(scrollingDiv, window);
+  }
+
+  jQuery('a.qaTool').click(function(e)
+  {
+    // Cancel the default action jumping to top of page in FireFox
+    e.preventDefault();
+  });
+
+  // qa helpers
+  jQuery('body').qaHelper();
+  openPlayer();
+  CenterItem('#playerFrame');
+   });
+
+
+  </script>
+  
+  <div id="playerFrame">
+   <div class="post" id="player">
+    <div class="sc-player showme">
+      <h3 class="qaHeader">&nbsp;</h3>
+      <ul class="toolList">
+        <li>
+          <a class="qaTool" 
+            id="antiRandomize" 
+            title="Sort Rows :: key- shortcut(Shift+Q+S)" 
+            href="#">
+            <span alt="sort rows" class="fa-icon-sort-numeric-asc" />
+          </a>
+      </li>
+      <li>
+        <a class="qaTool" 
+          id="checker" 
+          title="Check All :: key-shortcut(  Shift+Q+C)" href="#">
+          <span alt="check all" class="fa-icon-check"  />
+        </a>       
+        </li>
+       <li>
+        <a class="qaTool" 
+          id="2d" 
+          title="Straight Liner :: key-shortcut( Shift+Q+L)" 
+          href="#">
+          <span alt="straightLiner" class="fa-icon-road" />
+        </a>
+      </li>
+      <li>
+        <a 
+          class="qaTool" 
+          id="shareState" 
+          title="Share State :: key- shortcut(Shift+Q+A)"
+          href="#">
+          <span alt="share state" class="fa-icon-share-sign" />
+        </a>
+      </li>
+      <li>
+        <a 
+        class="qaTool" 
+        id="autoSubTb" 
+        title="Generate Data :: key-  shortcut(Shift+Q+Enter)" 
+        href="#">
+          <span alt="generate data" class ="fa-icon-database" />
+        </a>
+      </li>
+      <li>
+        <a 
+          class="qaTool" 
+          id="fillText" 
+          title="Fill input fields :: key- shortcut(Shift+Q+I)" 
+          href="#">
+            <span alt="Fill input fields" class  ="fa-icon-edit" />
+        </a>
+      </li>
+      <li>
+        <a
+           class="qaTool" 
+           id="downloadData" 
+           title="Download Excel :: key -shortcut(Shift+Q+D)" 
+           href="#">
+           <span alt="Download Excel" class="fa-icon-file-excel-o" />
+        </a>
+      </li>
+      <li>
+        <a 
+          class="qaTool" 
+          id="goToQuestionPlease" 
+          title="Go to any   Question :: key-shortcut(Shift+Q+G)" href="#">
+          <span alt="Go to  any Question" class="fa-icon-magic" />
+        </a>
+      </li>
+      <li>
+        <a 
+        class="qaTool" 
+        id="skipQuestion" 
+        title="Skip this question  :: key-shortcut(Shift+Q+Enter)" 
+        href="#">
+          <span alt="skip this  question" class="fa-icon-angle-double-right" />
+        </a>
+      </li>
+      <li>
+        <a  class="qaTool" 
+        id="make100Percent" 
+        title="Make 100% :: key- shortcut(Shift+Q+1)" 
+        href="#">
+          <span alt="Make 100%" class="fa-icon-bomb" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+@endif
+
+
+

@@ -11,8 +11,9 @@ css folder the qaTool.css needed
 nstyles folder the nstyles file which can be added to any existing nstyles file or as a stand alone.
 
 set this alias to run in any survey folder:
+```
 alias addQAtools="git clone 'https://github.com/krasserp/v2QaHelper.git'; cp v2QaHelper/js/*.js ./static; cat v2QaHelper/nstyles/nstyles >> nstyles; cat v2QaHelper/css/qaTool.css >> static/qaTool.css; reload ."
-
+```
 
 recommended 
 compat="128"

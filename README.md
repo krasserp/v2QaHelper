@@ -7,9 +7,14 @@ Based on this document:
 https://docs.google.com/document/d/123PVrd6m-GcxhM6NQAr6K82mZPc1U80HRG2wue9NncA/edit
 
 js folder contains the necessary files to be added to the static folder
-css folder the custom.css needed
+css folder the qaTool.css needed
 nstyles folder the nstyles file which can be added to any existing nstyles file or as a stand alone.
 
+set this alias to run in any survey folder:
+alias addQAtools="git clone 'https://github.com/krasserp/v2QaHelper.git'; cp v2QaHelper/js/*.js ./static; cat v2QaHelper/nstyles/nstyles >> nstyles; cat v2QaHelper/css/qaTool.css >> static/qaTool.css; reload ."
+
+
+recommended 
 compat="128"
 needs font-awesome
 

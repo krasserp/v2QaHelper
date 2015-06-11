@@ -2,9 +2,8 @@
 *survey.header:
 @if  gv.survey.root.state.testing and device.desktop
 
-<style id="Bn5Hq" name="respview.client.css">
-<link rel="stylesheet" href="[rel qaTool.css]" type="text/css" charset="utf-8"/>
-</style>
+
+<link rel="stylesheet" href="/survey/${gv.survey.path}/qaTool.css" type="text/css" charset="utf-8"/>
   <script type="text/javascript" src="/survey/${gv.survey.path}/jquery.cookie.js"></script>
   <script type="text/javascript" src="/survey/${gv.survey.path}/jquery.jscroll.min.js"></script>
   <script type="text/javascript" src="/survey/${gv.survey.path}/playerLayer.js"></script>

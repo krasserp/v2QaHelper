@@ -1,0 +1,71 @@
+
+
+/********************************** in test mode only **************************/
+#survey .qaInfo {
+
+  clear: both !important;
+}
+
+span[class*='fa-icon-']{
+	font-size:200%;
+}
+
+/********QA overlay **************/
+
+h3.qaHeader{
+  margin-bottom: 1em;
+  border-bottom: 2px dotted #ccceee;
+  padding-bottom:0.5em;
+  height: 1.5em;
+  font-size: 0.5em;
+}
+
+#playerFrame{
+  background-color:#202020;
+  color:#202020;
+  width:750px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-box-shadow: 1px 1px 4px #ccc;
+  -webkit-box-shadow: 1px 1px 4px #ccc;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px #ccc;
+  padding:5px;
+  display:block; 
+  top:75px;
+  left:0px;
+  z-index:11001;
+  background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#eee),color-stop(1,#fff));
+  background: -ms-linear-gradient(bottom,#eee,#fff);
+  background: -moz-linear-gradient(center bottom,#eee 0,#fff 100%);
+  background: -o-linear-gradient(#fff,#eee);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.6);
+  -moz-box-shadow: 0 2px 3px rgba(0,0,0,.6);
+  box-shadow: 0 2px 3px rgba(0,0,0,.6);
+}
+
+#playerFrame a.qaTool{
+  display:inherit;
+  margin-right: 0.5em;
+  border-right: 1px dotted #ccc;
+  text-align: center;
+  font-size:85%;
+}
+
+a.qaTool span{
+	margin-right: 0.5em;
+}
+
+ul.toolList li{
+	list-style: none;
+	display: inline-block;
+	padding-right:0.5em;
+}
+
+.showme{
+	display: block;
+}
+.collapse{
+	display: none;
+}

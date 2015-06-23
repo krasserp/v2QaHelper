@@ -221,7 +221,13 @@
 
  function fantiRandomize(){
   $('div[id^="question_"]').each(function(){
-    tinysort('#'+$(this).attr('id')+' tr.row.row-elements',{selector:'input',attr:'value'});
+    currentType =$('#'+$(this).attr('id')+' tr.row.row-elements').find('input').type;
+    if(currentType ==='checkbox'){
+      tinysort('#'+$(this).attr('id')+' tr.row.row-elements',{selector:'input',attr:'name'});
+    }
+    if(currentType ==='radio'){
+      tinysort('#'+$(this).attr('id')+' tr.row.row-elements',{selector:'input',attr:'value'});
+    }
   });
 }
 

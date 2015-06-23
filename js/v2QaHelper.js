@@ -221,7 +221,7 @@
 
  function fantiRandomize(){
   $('div[id^="question_"]').each(function(){
-    currentType =$('#'+$(this).attr('id')+' tr.row.row-elements').find('input').type;
+    currentType =$('#'+$(this).attr('id')+' tr.row.row-elements').find('input').attr('type');
     if(currentType ==='checkbox'){
       tinysort('#'+$(this).attr('id')+' tr.row.row-elements',{selector:'input',attr:'name'});
     }

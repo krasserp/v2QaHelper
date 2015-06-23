@@ -25,20 +25,18 @@ function openPlayer() {
 		});
 	}
 	$('#playerFrame').draggable({
-			drag: function(){
-	            var offset = $(this).offset();
-	            var xPos = offset.left;
-	            var yPos = offset.top;
-	            console.log('x: ' + xPos, ' y: ' + yPos);
-	        },
-	        stop: function(){
-	            var finalOffset = $(this).offset();
-	            var finalxPos = finalOffset.left;
-	            var finalyPos = finalOffset.top;
-	            console.log('x: ' + finalxPos, ' y: ' + finalyPos);
-	            $.cookie('dragX', finalxPos);
-	            $.cookie('dragY', finalyPos);
-        	}
+		drag: function(){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+        },
+        stop: function(){
+            var finalOffset = $(this).offset();
+            var finalxPos = finalOffset.left;
+            var finalyPos = finalOffset.top;
+            $.cookie('dragX', finalxPos);
+            $.cookie('dragY', finalyPos);
+     	}
         });
 	// setting cookies to determine if the draggable toolbar is collapsed or open
 	if ($.cookie('collapse') == 'hide') {

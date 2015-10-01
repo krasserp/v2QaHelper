@@ -21,4 +21,4 @@ needs font-awesome
 
 
 Demo here:
-https://v2.decipherinc.com/survey/selfserve/1705/styleDemo/template/temp-QA-testBar
+https://v2.decipherinc.com/survey/selfserve/1705/meshTemplates/qaTool?_dj
